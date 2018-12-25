@@ -22,4 +22,9 @@
 
 // const subscription = source$.subscribe(console.log);
 
-import './Progress/RxPromise';
+// import './Progress/RxPromise';
+// import './Operator/cancel';
+// import './Operator/switch';
+// import './Operator/timeout';
+// import './Operator/candidates';
+import './Operator/dragdrop';
