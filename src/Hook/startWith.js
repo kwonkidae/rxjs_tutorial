@@ -4,8 +4,9 @@ import { Observable }  from 'rxjs';
 import { from } from 'rxjs/operator'; 
 
 function startWith(value) {
+  let source = this;
   return Observable.create(subscriber => {
-    let source = this;
+    // let source = this;
     try {
       subscriber.next(value);
     } catch(err) {
