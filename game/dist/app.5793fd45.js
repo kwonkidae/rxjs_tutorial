@@ -14952,7 +14952,8 @@ var renderGame = function renderGame(state) {
 
 var renderGameOver = function renderGameOver() {
   return document.body.innerHTML += '<br/>GAME OVER!';
-};
+}; // tslint:disable-next-line:no-empty
+
 
 var noop = function noop() {};
 

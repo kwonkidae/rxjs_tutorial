@@ -26,7 +26,7 @@ const letters$ = intervalSubject.pipe(switchMap(i => interval(i).pipe(
   }), {ltrs: [], intrvl: 0})
 )));
 
-const key$ = fromEvent(document, 'keydown')
+const key$ = fromEvent<KeyboardEvent | any>(document, 'keydown')
   .pipe(
     startWith({key: ''}),
     map((e: KeyboardEvent) => e.key)
@@ -39,6 +39,7 @@ const renderGame = (state: State) => {
 };
 
 const renderGameOver = () => document.body.innerHTML += '<br/>GAME OVER!';
+// tslint:disable-next-line:no-empty
 const noop = () => {};
 
 const game$ = combineLatest(key$, letters$).pipe(
